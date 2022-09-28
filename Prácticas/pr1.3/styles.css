@@ -1,0 +1,13 @@
+thead{
+    background-color: greenyellow;
+}
+tbody{
+    background-color: pink;
+}
+tfoot{
+    background-color: grey;
+    text-align: left;
+}
+tr td:last-child, tbody tr th:last-child{
+    background-color: lightskyblue;
+}
