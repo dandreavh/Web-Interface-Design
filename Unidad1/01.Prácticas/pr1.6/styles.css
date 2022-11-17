@@ -1,0 +1,10 @@
+table, th, td {
+    border: 1px dashed red;
+    text-align: center;
+}
+img{
+    width: 100px;
+}
+thead, tfoot{
+    background-color: bisque;
+}

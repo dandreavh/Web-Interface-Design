@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Formulario de reserva de salas</h1>
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <label for="fname" class="required">Tu nombre:</label>
+                </td>
+                <td>
+                    <input type="text" id="fname" value="nombre">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="femail" class="required">Tu correo electrónico:</label>
+                </td>
+                <td>
+                    <input type="text" id="femail" value="correo electrónico">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fdepartment" class="required">Departamento:</label>
+                </td>
+                <td>
+                    <select name="departments" id="dep">
+                        <option value="ventas">Ventas</option>
+                        <option value="rrhh">RRHH</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="froom" class="required">Tipo de sala que desea reservar:</label>
+                </td>
+                <td>
+                    <input type="radio" id="tipoA" name="room" value="tipoA">
+                    <label for="tipoA">Tipo A</label><br>
+                    <input type="radio" id="tipoB" name="room" value="tipoB">
+                    <label for="tipoB">Tipo B</label><br>
+                    <input type="radio" id="tipoC" name="room" value="tipoC">
+                    <label for="tipoC">Tipo C</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fextra">Requisitos extra:</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="cyb" name="extra" value="cyb">
+                    <label for="cyb">Caballete y bolígrafos</label><br>
+                    <input type="checkbox" id="tele" name="extra" value="tele">
+                    <label for="tele">Televisión</label><br>
+                    <input type="checkbox" id="cafe" name="extra" value="cafe">
+                    <label for="cafe">Café, té y agua</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fdate" class="required">Fecha de la reserva:</label>
+                </td>
+                <td>
+                    <input type="date" id="book" name="booking">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fhour" class="required">Hora de la reserva:</label>
+                </td>
+                <td>
+                    <input type="time" id="hour" name="hour">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

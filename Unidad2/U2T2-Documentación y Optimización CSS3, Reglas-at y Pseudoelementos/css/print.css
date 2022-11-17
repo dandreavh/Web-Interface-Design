@@ -1,0 +1,23 @@
+/*____________________________________________________________________
+ Project: Documentación y Optimización CCS3
+ Version: 1.0 PRINT MODE
+ Last change: 02/11/2022
+ Author: Andrea
+ ---------------------[TABLE OF CONTENTS]---------------------
+ 1. Global imports
+ 2. Main
+    2.1. Titles
+ ---------------------[COLOR PALETTE]---------------------
+ 1. H1 & H2 --> #0499aa                               
+______________________________________________________________________
+*/
+
+/* ===== 1. Global imports ===== */
+@import url("./styles.css") screen;
+@import url("./mobile.css") screen and (min-width: 480px);
+
+/* ===== 2. Main ===== */
+/* === 2.1. Titles === */
+h1, h2{
+    color: #0499aa;
+}

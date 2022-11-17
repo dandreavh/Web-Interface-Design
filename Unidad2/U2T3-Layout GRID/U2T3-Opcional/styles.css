@@ -1,0 +1,69 @@
+/*____________________________________________________________________
+ Project: Ejercicio optativo GRID
+ Version: 1.0 SCREEN MODE
+ Last change: 14/11/2022
+ Author: Andrea
+
+ ---------------------[TABLE OF CONTENTS]---------------------
+ 1. Main
+ 2. Header
+ 3. Left aside
+ 4. Section
+ 5. Right aside
+ 6. Footer
+ 7. All items styles
+
+ ---------------------[COLOR PALETTE]---------------------
+ 1. letters --> white, black
+ 2. Header and Footer background --> rgb(159, 159, 159);
+ 3. Left aside and section background --> rgb(74, 74, 74);
+ 4. Right aside --> rgb(200, 200, 200);
+                                                                                                                                                                     
+______________________________________________________________________
+*/
+
+/* ===== 1. Main ===== */
+main{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto auto;
+    color: white;
+    width: 50%;
+}
+/* ===== 2. Header ===== */
+header{
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    background-color: rgb(159, 159, 159);
+}
+/* ===== 3. Left aside ===== */
+header~aside{
+    background-color: rgb(74, 74, 74);
+    grid-column: 1;
+    grid-row: 2;
+}
+/* ===== 4. Section ===== */
+section{
+    background-color: rgb(74, 74, 74);
+    grid-column: 2;
+    grid-row: 2;
+}
+/* ===== 5. Right aside ===== */
+section~aside{
+    background-color: rgb(200, 200, 200);
+    color: black;
+    grid-column: 3;
+    grid-row: 2;
+}
+/* ===== 6. Footer ===== */
+footer{
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    background-color: rgb(159, 159, 159);
+}
+/* ===== 7. All items styles ===== */
+header, footer, section, aside{
+    padding: 1em;
+    border-radius: 5px;
+}

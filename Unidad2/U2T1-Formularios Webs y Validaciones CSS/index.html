@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios Webs y Validaciones CSS</title>
+    <style>
+        /* ESTILOS GENERALES DE LOS ELEMENTOS */
+        body{
+            background-image: linear-gradient( 135deg, #EE9AE5 10%, #5961F9 100%);
+        }
+        form {
+            font-family: sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.5rem;
+            box-shadow: 2px 2px 20px rgb(60, 60, 60);
+            width: max-content;
+            border-radius: 00.25rem;
+            background-color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+        input, select{
+            border-color: gray !important;
+            border-radius: 0.5rem;
+            border: 1.5px solid;
+            width: 200px;
+        }
+        input:focus, select:focus{
+            border-color: #5961F9;
+            box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 4px #0b13a6;
+            outline: 0 none;
+        }
+        *:required{
+            border-color: black!important;
+        }
+        input + span{
+            position: relative;
+        }
+        input:invalid + span::after, datalist:invalid + span::after, select:invalid +  span::after{
+            content: "\00d7";
+            color: #e49ea4;
+        }
+
+        input:valid + span::after, datalist:valid + span::after, select:valid +  span::after{
+            content: "\2713";
+            color: rgb(137, 203, 172);
+        }
+        div {
+            padding: 0.5rem;
+        }
+        button {
+            cursor: pointer;
+            border: 0;
+            padding: 1rem;
+            color: white;
+            width: 250px;
+            margin-top: 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            border: 1.5px solid;
+        }
+        button:hover {
+            background-color: rgb(50, 50, 50)!important;
+            color: whitesmoke;
+        }
+        fieldset{
+            border: 0;
+            border-top: 1px solid;
+            border-color:#EE9AE5;
+            margin-bottom: 2rem;
+        }
+        legend{
+            font-style: italic;
+        }
+        
+        /* ESTILOS POR CLASE */
+        .floatLeft{
+            float: left;
+        }
+
+        .floatLeft input, .floatLeft label{
+            display: block;
+        }
+
+        /* ESTILOS POR ID */
+        #enviar{
+            background-color:#0b13a6;
+        }
+        #resetear{
+            background-color: #f14179;
+        }
+        #edad:valid{
+            background-color: rgb(137, 203, 172);
+        }
+        #edad:invalid{
+            background-color: #e49ea4;
+        }
+        #terminos{
+            width: 20px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>· Registro ·</h1>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <div class="floatLeft">
+                <div>
+                    <label for="tratamiento">Tratamiento</label>
+                    <input list="tratamientos" name="tratamiento" id="tratamiento"autocomplete="on" title="Debe ser una de estas opciones:Sr., Sra., Dr., Dra." autofocus>
+                    <datalist type="text" id="tratamientos">
+                        <option value="Sr.">
+                        <option value="Sra.">
+                        <option value="Dr.">
+                        <option value="Dra.">
+                    </datalist>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" title="Ejemplo: María Luisa" placeholder="Nombre" required />
+                    <span></span>
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" title="Ejemplo: García Pérez" placeholder="Apellidos" required />
+                    <span></span>
+                </div>
+            </div>
+            <div class="floatLeft">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" title="Ejemplo: micorreo@gmail.com" placeholder="Email" required />
+                    <span></span>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="\d{9}"
+                        title="El teléfono debe contener 9 números. Ejemplo: 955489300" placeholder="Teléfono" />
+                    <span></span>
+                </div>
+                <div>
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" name="nacimiento" title="Ejemplo: 27/12/1994" required />
+                    <span></span>
+                </div>
+                <div>
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" min="16" max="130" title="Ejemplo: 27" placeholder="18"/>
+                    <span></span>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Datos adicionales</legend>
+            <div class="floatLeft">
+                <div>
+                    <label for="color">Color preferido</label>
+                    <input type="color" id="color" name="color" title="Ejemplo: #FFFF"/>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="web">Página web</label>
+                    <input type="url" id="web" name="web" pattern="http(s?)://*.*.*"
+                        title="Ejemplo: https://www.miweb.com" placeholder="url"/>
+                    <span></span>
+                </div> 
+            </div>
+            <div class="floatLeft">
+                <div>
+                    <label for="mes">Inicio de estudios</label>
+                    <input type="month" id="mes" name="mes" max="2022-09" title="Ejemplo: septiembre del 2020 (2020-09)" />
+                    <span></span>
+                </div>
+                <div>
+                    <label for="curso">Curso actual</label>
+                    <select id="curso" name="curso" title="Debe escoger una de las dos opciones">
+                        <option value="2021/2022">2021/2022</option>
+                        <option value="2022/2023" selected>2022/2023</option>
+                    </select>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="satisfaccion">Satisfacción</label>
+                    <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10" step="0.5"
+                        title="Seleccione un punto del rango" />
+                    <span></span>
+                </div>
+            </div>       
+        </fieldset>
+        <fieldset id="bloqueContraseña">
+            <legend>Contraseña</legend>
+            <div>
+                <label for="contraseña">Contraseña actual</label>
+                <input type="password" id="contraseña" name="contraseña" title="Debe introducir una contraseña" placeholder="Contraseña"/>
+                <span></span>
+            </div>
+            <div>
+                <input type="checkbox" id="terminos" name="terminos"
+                    title="Marque o no si comprende la importancia de las contraseñas seguras" />
+                <label for="terminos">Comprendo la importancia de establecer contraseñas seguras</label>
+            </div>
+        </fieldset>
+        <button type="submit" id="enviar" name="enviar">Enviar</button>
+        <button type="reset" id="resetear" name="resetear">Resetear</button>
+    </form>
+</body>
+
+</html>

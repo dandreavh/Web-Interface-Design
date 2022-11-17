@@ -1,0 +1,35 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    width: min-content;
+    font-family: sans-serif;
+}
+
+thead, tbody{
+    text-align: center;
+}
+
+.daw{
+    background-color: rgb(117, 158, 117);
+}
+
+.dwec{
+    background-color: rgb(154, 182, 235);
+}
+
+.hlc{
+    background-color: rgb(239, 239, 208);
+}
+
+.dwes{
+    background-color: rgb(202, 131, 131);
+}
+
+.einem{
+    background-color: rgb(241, 185, 79);
+}
+
+.diw{
+    background-color: rgb(160, 102, 153);
+}
