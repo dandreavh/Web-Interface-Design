@@ -1,0 +1,53 @@
+// Ej6. Left, top & bottom
+@mixin left {
+    left: 0;
+}
+@mixin right {
+    right: 0;
+}
+@mixin top {
+    top: 0;
+}
+@mixin bottom {
+    bottom: 0;
+}
+@mixin left-50 {
+    left: 50%;
+}
+@mixin top-50 {
+    top: 50%;
+}
+@mixin middle-y {
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+}
+@mixin position-x{
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+}
+
+// Ej9. Borders
+@mixin border-style($type,$px) {
+    @if $type == border {
+        border: $px $border-format;
+    } @else if $type == top {
+        border-top: $px $border-format;
+    } @else if $type == bottom {
+        border-bottom: $px $border-format;
+    } @else if $type == left {
+        border-left: $px $border-format;
+    } @else if $type == right {
+        border-right: $px $border-format;
+    }
+}
+
+// Ej12. Colors
+@mixin color-style($type,$color-name) {
+    @if $type == "font-color" {
+        color: $color-name !important;
+    } @else if $type == "border-color" {
+        border-color: $color-name !important;
+    } @else if $type == "background-color" {
+        background-color: $color-name !important;
+    }
+}
