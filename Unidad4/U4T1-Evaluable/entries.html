@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons kit -->
+    <script src="https://kit.fontawesome.com/7124061660.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>EjercicioEvaluable-Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- HEADER (ROW 1)-->
+        <div class="row">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand w-3" href="./index.html"><img src="./img/logo.svg" alt="Imperial Logo"
+                                width="100" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./index.html">Inicio 
+                                        <i class="bi bi-house"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="./entries.html">Entradas 
+                                        <i class="bi bi-card-list"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Crear entrada
+                                        <i class="bi bi-file-earmark-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="d-inline-flex" role="search">
+                                <button class="btn" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                                <div class="collapse" id="collapseExample">
+                                    <button type="button" class="btn-close" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample" aria-label="Close"></button>
+                                    <input class="form-control me-2" type="search" placeholder="Buscar"
+                                        aria-label="Search" autofocus>
+                                </div>
+                            </form>
+                            <button class="btn btn-outline-dark mx-3">
+                                <a href="./register.html" class="text-decoration-none text-danger">Registro
+                                    <i class="bi bi-person-plus-fill"></i>
+                                </a>
+                            </button>
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login
+                                <i class="bi bi-box-arrow-in-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- MODAL LOGIN WINDOW -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <i class="bi bi-person-fill"></i>
+                                <label for="user" class="col-form-label">Usuario:</label>
+                                <input type="text" class="form-control" id="user">
+                            </div>
+                            <div class="mb-3">
+                                <i class="bi bi-key-fill"></i>
+                                <label for="password" class="col-form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="password"></input>
+                            </div>
+                            <div class="mb-3">
+                                <input type="checkbox" id="check"></input>
+                                <label for="check" class="col-form-label">Mantener sesión abierta</label>
+                            </div>
+                            <div class="mb-2">
+                                <a href="" class="text-muted">He olvidado mi contraseña</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT (ROW 2)-->
+        <div class="row mt-6">
+            <div class="border-bottom border-danger border-3 py-4">
+                <h1 class="text-center mt-5">Entradas del blog</h1>
+            </div>
+            <!--col principal-->
+            <div class="col-sm-8">
+                <div class="pt-5">
+                    <!--entrada-->
+                    <div class="card mb-3 w-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/zapatillas.jpg" class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zapatillas inteligentes</h5>
+                                    <p><small class="card-text">Zapatillas de tipo inteligente, prendas que llevan a nuestros pies las ventajas de la tecnología, ofreciéndonos diferentes prestaciones que de otra forma sería imposible tener...</small></p>
+                                    <div class="">
+                                        <!--categoría-->
+                                        <div>
+                                            <i class="bi bi-bookmark-star-fill"></i>
+                                            <a href="" class="badge bg-danger text-light text-decoration-none">Equipamiento</a>
+                                        </div>                                       
+                                        <!--tags-->
+                                        <div class="d-sm-flex">
+                                            <div>
+                                                <i class="bi bi-tags-fill text-black"></i>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#equipación</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#ropadeportiva</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#lifestyle</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#sportlife</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-sm-flex">
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-eye-fill"></i><a href="" class="text-muted px-1 text-decoration-none">89 visitas</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-heart-fill"></i><a href="" class="text-muted px-1 text-decoration-none">1.398 me gusta</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-chat-dots-fill"></i><a href="" class="text-muted px-1 text-decoration-none">105 comentarios</a></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--entrada-->
+                    <div class="card mb-3 w-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/corredores.jpg" class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beneficios de correr 30 minutos al día</h5>
+                                    <p><small class="card-text">Correr se ha convertido en un hábito. Para mejorar la salud y nuestro estado físico, se necesita entrenar un total de 150 minutos a la semana. Esto, efectivamente, nos da una media de 30 minutos diarios...</small></p>
+                                    <div class="">
+                                        <!--categoría-->
+                                        <div>
+                                            <i class="bi bi-bookmark-star-fill"></i>
+                                            <a href="" class="badge bg-danger text-light text-decoration-none">Salud</a>
+                                        </div>                                       
+                                        <!--tags-->
+                                        <div class="d-sm-flex">
+                                            <div>
+                                                <i class="bi bi-tags-fill text-black"></i>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#equipación</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#ropadeportiva</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#lifestyle</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#sportlife</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-sm-flex">
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-eye-fill"></i><a href="" class="text-muted px-1 text-decoration-none">192 visitas</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-heart-fill"></i><a href="" class="text-muted px-1 text-decoration-none">1.998 me gusta</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-chat-dots-fill"></i><a href="" class="text-muted px-1 text-decoration-none">102 comentarios</a></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--entrada-->
+                    <div class="card mb-3 w-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/runners1.jpg" class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Correr en la oscuridad de la noche</h5>
+                                    <p><small class="card-text">Tras el verano, las horas de luz se acortan cada vez más, esta va desapareciendo a media tarde y anochece muy temprano, pero la mayoría de nosotros no tenemos más remedio que salir a entrenar a esas horas...</small></p>
+                                    <div class="">
+                                        <!--categoría-->
+                                        <div>
+                                            <i class="bi bi-bookmark-star-fill"></i>
+                                            <a href="" class="badge bg-danger text-light text-decoration-none">Equipamiento</a>
+                                        </div>                                       
+                                        <!--tags-->
+                                        <div class="d-sm-flex">
+                                            <div>
+                                                <i class="bi bi-tags-fill text-black"></i>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#consejos</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#corredores</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#runners</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#deporte</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#lifestyle</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#sportlife</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-sm-flex">
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-eye-fill"></i><a href="" class="text-muted px-1 text-decoration-none">52 visitas</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-heart-fill"></i><a href="" class="text-muted px-1 text-decoration-none">318 me gusta</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-chat-dots-fill"></i><a href="" class="text-muted px-1 text-decoration-none">15 comentarios</a></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--entrada-->
+                    <div class="card mb-3 w-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/corredores2.jpg" class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cuánto cuesta ir a la maratón de Tokio</h5>
+                                    <p><small class="card-text">El sueño de todo corredor es asistir a una de los eventos más importantes en el mundo runner, la gran carrera de Tokio, pero lo primero que nos preguntamos es: cuánto nos costará...</small></p>
+                                    <div class="">
+                                        <!--categoría-->
+                                        <div>
+                                            <i class="bi bi-bookmark-star-fill"></i>
+                                            <a href="" class="badge bg-danger text-light text-decoration-none">Internacional</a>
+                                        </div>                                       
+                                        <!--tags-->
+                                        <div class="d-sm-flex">
+                                            <div>
+                                                <i class="bi bi-tags-fill text-black"></i>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#maratones</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#competiciones</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#carreras</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#eventos</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-sm-flex">
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-eye-fill"></i><a href="" class="text-muted px-1 text-decoration-none">8.109 visitas</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-heart-fill"></i><a href="" class="text-muted px-1 text-decoration-none">5.398 me gusta</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-chat-dots-fill"></i><a href="" class="text-muted px-1 text-decoration-none">565 comentarios</a></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--entrada-->
+                    <div class="card mb-3 w-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/corredora.jpg" class="img-fluid rounded-start h-100" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Crónica de la Media Maratón de Orihuela 2022</h5>
+                                    <p><small class="card-text">Tenemos unas de las mejores media maratones del mundo. Aunque las condiciones meteorológicas fueron adversas, la experiencia fue, simplemente, espectacular...</small></p>
+                                    <div class="">
+                                        <!--categoría-->
+                                        <div>
+                                            <i class="bi bi-bookmark-star-fill"></i>
+                                            <a href="" class="badge bg-danger text-light text-decoration-none">Eventos</a>
+                                        </div>                                       
+                                        <!--tags-->
+                                        <div class="d-sm-flex">
+                                            <div>
+                                                <i class="bi bi-tags-fill text-black"></i>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#eventos</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#carreras</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#competiciones</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#maratones</a>
+                                                <a href="#" class="badge text-primary-emphasis p-1">#esfuerzo</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-sm-flex">
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-eye-fill"></i><a href="" class="text-muted px-1 text-decoration-none">213 visitas</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-heart-fill"></i><a href="" class="text-muted px-1 text-decoration-none">494 me gusta</a></small></p>
+                                        <p class="card-text me-2 mb-0"><small class="text-muted"><i class="bi bi-chat-dots-fill"></i><a href="" class="text-muted px-1 text-decoration-none">56 comentarios</a></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Pagination-->
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link text-danger" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link text-danger" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--col lateral-->
+            <div class="col-sm-4 text-center">
+                <!-- RRSS -->
+                <div class="my-3">
+                    <h4>Síguenos en nuestras redes sociales</h4>
+                    <a href="http://www.facebook.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-facebook"></i></a>
+                    <a href="http://www.instagram.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-instagram"></i></a>
+                    <a href="http://www.twitter.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-twitter"></i></a>
+                    <a href="http://www.tiktok.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-tiktok"></i></a>
+                    <hr>
+                </div>
+                <!-- Banner -->
+                <div class="banner my-3">
+                    <img class="w-100" src="./img/Banner.png" alt="Banner" />
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER (ROW 3)-->
+        <div class="row border-top border-danger border-3 py-4">
+            <footer>
+                <div class="row">
+                    <div class="col">
+                        <h6>Encuéntranos</h6>
+                        <iframe class="w-75"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12684.986951386925!2d-6.162829129509961!3d37.36033823401792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12110e75b253f9%3A0x957b72dc37f7cbbf!2sLa%20Madruga!5e0!3m2!1ses!2ses!4v1674214902620!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p class="text-muted">Calle Huelva. 41806, Umbrete, Sevilla</p>
+                    </div>
+                    <div class="col">
+                        <h6>Mapa de la página</h6>
+                        <a href="./index.html">Inicio</a>
+                        <a href="./entries.html">Entradas</a>
+                        <a href="./index.html">Crear entrada</a>
+                        <a href="./register.html">Registro</a>
+                        <a href="./register.html">Login</a>
+                    </div>
+                    <div class="col">
+                        <h6>Etiquetas relacionadas</h6>
+                        <a href="#" class="badge bg-light text-dark">#runners</a>
+                        <a href="#" class="badge bg-light text-dark">#corredores</a>
+                        <a href="#" class="badge bg-light text-dark">#maratones</a>
+                        <a href="#" class="badge bg-light text-dark">#competiciones</a>
+                        <a href="#" class="badge bg-light text-dark">#carreras</a>
+                        <a href="#" class="badge bg-light text-dark">#eventos</a>
+                        <a href="#" class="badge bg-light text-dark">#deportes</a>
+                        <a href="#" class="badge bg-light text-dark">#consejos</a>
+                        <a href="#" class="badge bg-light text-dark">#nutrición</a>
+                        <a href="#" class="badge bg-light text-dark">#salud</a>
+                        <a href="#" class="badge bg-light text-dark">#amistad</a>
+                        <a href="#" class="badge bg-light text-dark">#libertad</a>
+                        <a href="#" class="badge bg-light text-dark">#esfuerzo</a>
+                        <a href="#" class="badge bg-light text-dark">#equipación</a>
+                        <a href="#" class="badge bg-light text-dark">#ropadeportiva</a>
+                        <a href="#" class="badge bg-light text-dark">#lifestyle</a>
+                        <a href="#" class="badge bg-light text-dark">#sportlife</a>
+                    </div>
+                    <div class="col">
+                        <h6>Categorías</h6>
+                        <a href="#" class="badge bg-light text-muted">Salud</a>
+                        <a href="#" class="badge bg-light text-muted">Equipamiento</a>
+                        <a href="#" class="badge bg-light text-muted">Eventos</a>
+                        <a href="#" class="badge bg-light text-muted">Internacional</a>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <h6>Derechos reservados @dandreavh</h6>
+                    <div>
+                        <p class="mb-0">Licencias de uso</p>
+                        <div>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=siguiente%20cuatro%20condiciones%3A-,Atribuci%C3%B3n,-(BY)"
+                                target="_blank"><img src="./img/by.svg" alt="BY" width="15px"></a>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=o%20el%20licenciante.-,No%20Comercial,-(NC)"
+                                target="_blank"><img src="./img/nc.svg" alt="NC" width="15px"></a>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=producir%20obras%20derivadas.-,Compartir%20Igual,-(SA)"
+                                target="_blank"><img src="./img/sa.svg" alt="SA" width="15px"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

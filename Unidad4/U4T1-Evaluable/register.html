@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons kit -->
+    <script src="https://kit.fontawesome.com/7124061660.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>EjercicioEvaluable-Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- HEADER (ROW 1)-->
+        <div class="row">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand w-3" href="./index.html"><img src="./img/logo.svg" alt="Imperial Logo"
+                                width="100" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./index.html">Inicio 
+                                        <i class="bi bi-house"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./entries.html">Entradas 
+                                        <i class="bi bi-card-list"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Crear entrada
+                                        <i class="bi bi-file-earmark-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="d-inline-flex" role="search">
+                                <button class="btn" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                                <div class="collapse" id="collapseExample">
+                                    <button type="button" class="btn-close" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample" aria-label="Close"></button>
+                                    <input class="form-control me-2" type="search" placeholder="Buscar"
+                                        aria-label="Search" autofocus>
+                                </div>
+                            </form>
+                            <button class="btn btn-outline-dark mx-3">
+                                <a href="./register.html" class="text-decoration-none text-danger">Registro
+                                    <i class="bi bi-person-plus-fill"></i>
+                                </a>
+                            </button>
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login
+                                <i class="bi bi-box-arrow-in-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- MODAL LOGIN WINDOW -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <i class="bi bi-person-fill"></i>
+                                <label for="user" class="col-form-label">Usuario:</label>
+                                <input type="text" class="form-control" id="user">
+                            </div>
+                            <div class="mb-3">
+                                <i class="bi bi-key-fill"></i>
+                                <label for="password" class="col-form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="password"></input>
+                            </div>
+                            <div class="mb-3">
+                                <input type="checkbox" id="check"></input>
+                                <label for="check" class="col-form-label">Mantener sesión abierta</label>
+                            </div>
+                            <div class="mb-2">
+                                <a href="" class="text-muted">He olvidado mi contraseña</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT (ROW 2)-->
+        <div class="row">
+            <div class="border-bottom border-danger border-3 py-4">
+                <h1 class="text-center mt-5">Registro de usuario</h1>
+            </div>
+            <div class="col-sm-8">
+                <form class="shadow p-3 m-5 bg-body rounded">
+                    <div>
+                        <h2 class="text-center my-5 text-danger">Datos de registro</h2>
+                    </div>
+                    <div class="row g-2">
+                        <div class="form-floating mb-3 col-sm">
+                            <input type="text" class="form-control border-danger" id="nombre" placeholder="Nombre" required>
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="form-floating mb-3 col-sm">
+                            <input type="text" class="form-control border-danger" id="apellidos" placeholder="Apellidos" required>
+                            <label for="apellidos">Apellidos</label>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control border-danger" id="email" placeholder="nombre@correo.com" required>
+                        <label for="email"><i class="bi bi-envelope-at-fill"></i> Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="direccion" placeholder="Ubicación de la residencia">
+                        <label for="direccion"><i class="bi bi-geo-alt-fill"></i> Dirección</label>
+                    </div>
+                    <div class="row g-2">
+                        <div class="form-floating mb-3 col-sm">
+                            <input type="text" class="form-control" id="ccaa" placeholder="Nombre de la comunidad autónoma">
+                            <label for="ccaa">Comunidad autónoma</label>
+                        </div>
+                        <div class="form-floating mb-3 col-sm">
+                            <input type="text" class="form-control" id="provincia" placeholder="Nombre de la provincia">
+                            <label for="provincia">Provincia</label>
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="form-floating mb-3 col-sm">
+                            <input type="text" class="form-control" id="ciudad" placeholder="Nombre de la ciudad">
+                            <label for="ciudad">Ciudad</label>
+                        </div>
+                        <div class="form-floating mb-3 col-sm">
+                            <input type="text" class="form-control" id="cp" placeholder="12345" data-bs-toggle="tooltip" data-bs-placement="input" title="41806">
+                            <label for="cp">Código postal</label>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Cuenta un poco sobre ti" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea"><i class="bi bi-chat-text-fill"></i> Biografía</label>
+                    </div>
+                    <label for="instagram"><i class="bi bi-instagram"></i> Instagram</label>
+                    <div class="input-group mb-3 mt-1">
+                        <span class="input-group-text">https://instagram.com/</span>
+                        <input type="text" class="form-control" id="instagram" placeholder="usuario123">
+                    </div>
+                    <div class="text-center mt-5">
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4 text-center">
+                <!-- RRSS -->
+                <div class="my-3">
+                    <h4>Síguenos en nuestras redes sociales</h4>
+                    <a href="http://www.facebook.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-facebook"></i></a>
+                    <a href="http://www.instagram.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-instagram"></i></a>
+                    <a href="http://www.twitter.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-twitter"></i></a>
+                    <a href="http://www.tiktok.com" target="_blank" class="text-danger h2 m-1"><i class="bi bi-tiktok"></i></a>
+                    <hr>
+                </div>
+                <!-- Banner -->
+                <div class="banner my-3">
+                    <img class="w-100" src="./img/Banner.png" alt="Banner" />
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER (ROW 3)-->
+        <div class="row border-top border-danger border-3 py-4">
+            <footer>
+                <div class="row">
+                    <div class="col">
+                        <h6>Encuéntranos</h6>
+                        <iframe class="w-75"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12684.986951386925!2d-6.162829129509961!3d37.36033823401792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12110e75b253f9%3A0x957b72dc37f7cbbf!2sLa%20Madruga!5e0!3m2!1ses!2ses!4v1674214902620!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p class="text-muted">Calle Huelva. 41806, Umbrete, Sevilla</p>
+                    </div>
+                    <div class="col">
+                        <h6>Mapa de la página</h6>
+                        <a href="./index.html">Inicio</a>
+                        <a href="./entries.html">Entradas</a>
+                        <a href="./index.html">Crear entrada</a>
+                        <a href="./register.html">Registro</a>
+                        <a href="./register.html">Login</a>
+                    </div>
+                    <div class="col">
+                        <h6>Etiquetas relacionadas</h6>
+                        <a href="#" class="badge bg-light text-dark">#runners</a>
+                        <a href="#" class="badge bg-light text-dark">#corredores</a>
+                        <a href="#" class="badge bg-light text-dark">#maratones</a>
+                        <a href="#" class="badge bg-light text-dark">#competiciones</a>
+                        <a href="#" class="badge bg-light text-dark">#carreras</a>
+                        <a href="#" class="badge bg-light text-dark">#eventos</a>
+                        <a href="#" class="badge bg-light text-dark">#deportes</a>
+                        <a href="#" class="badge bg-light text-dark">#consejos</a>
+                        <a href="#" class="badge bg-light text-dark">#nutrición</a>
+                        <a href="#" class="badge bg-light text-dark">#salud</a>
+                        <a href="#" class="badge bg-light text-dark">#amistad</a>
+                        <a href="#" class="badge bg-light text-dark">#libertad</a>
+                        <a href="#" class="badge bg-light text-dark">#esfuerzo</a>
+                        <a href="#" class="badge bg-light text-dark">#equipación</a>
+                        <a href="#" class="badge bg-light text-dark">#ropadeportiva</a>
+                        <a href="#" class="badge bg-light text-dark">#lifestyle</a>
+                        <a href="#" class="badge bg-light text-dark">#sportlife</a>
+                    </div>
+                    <div class="col">
+                        <h6>Categorías</h6>
+                        <a href="#" class="badge bg-light text-muted">Salud</a>
+                        <a href="#" class="badge bg-light text-muted">Equipamiento</a>
+                        <a href="#" class="badge bg-light text-muted">Eventos</a>
+                        <a href="#" class="badge bg-light text-muted">Internacional</a>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <h6>Derechos reservados @dandreavh</h6>
+                    <div>
+                        <p class="mb-0">Licencias de uso</p>
+                        <div>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=siguiente%20cuatro%20condiciones%3A-,Atribuci%C3%B3n,-(BY)"
+                                target="_blank"><img src="./img/by.svg" alt="BY" width="15px"></a>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=o%20el%20licenciante.-,No%20Comercial,-(NC)"
+                                target="_blank"><img src="./img/nc.svg" alt="NC" width="15px"></a>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=producir%20obras%20derivadas.-,Compartir%20Igual,-(SA)"
+                                target="_blank"><img src="./img/sa.svg" alt="SA" width="15px"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

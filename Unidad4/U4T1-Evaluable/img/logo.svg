@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="126.5638mm"
+   height="46.944126mm"
+   viewBox="0 0 126.5638 46.944126"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="bitmap.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-39.574876,-16.988689)">
+    <text
+       xml:space="preserve"
+       style="font-size:29.6333px;line-height:0;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#020413;fill-opacity:1;stroke-width:0.264583"
+       x="39.574875"
+       y="35.805836"
+       id="text113"><tspan
+         sodipodi:role="line"
+         id="tspan111"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.6333px;font-family:'Racing Sans One';-inkscape-font-specification:'Racing Sans One';fill:#020413;fill-opacity:1;stroke-width:0.264583"
+         x="39.574875"
+         y="35.805836">IMPERIAL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.8167px;font-family:'Racing Sans One';-inkscape-font-specification:'Racing Sans One';fill:#020413;fill-opacity:1;stroke-width:0.264583"
+       x="47.112946"
+       y="61.058376"
+       id="text350"><tspan
+         sodipodi:role="line"
+         id="tspan348"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.8167px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#020413;fill-opacity:1;stroke-width:0.264583"
+         x="47.112946"
+         y="61.058376">Event planner</tspan></text>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+       id="rect2937"
+       width="103.46003"
+       height="2.6383247"
+       x="48.62056"
+       y="42.024742" />
+  </g>
+</svg>

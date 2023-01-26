@@ -1,0 +1,83 @@
+/*____________________________________________________________________
+ Project: Ejercicio evaluable
+ Version: 5.0
+ Last change: 06/12/2022
+ Author: Andrea
+
+ ---------------------[TABLE OF CONTENTS]---------------------
+ 1. GENERAL
+ 2. HEADER
+ 3. MENÚ
+ 4. PARTE DE ARTÍCULOS
+ 5. PARTE DE ASIDE
+ 6. FOOTER
+ 7. Común header y footer
+ 8. Estilo responsivo para pantallas móviles
+ 9. VÍDEO
+
+ ---------------------[COLOR PALETTE]---------------------
+ - Fondo menú: rgb(240, 240, 240)
+ - Letra menú: rgb(83, 83, 83)
+ - Letra menú con hover: black;
+ - Fondos menú, footer y botones: red
+ - Letra menú, footer y botones: white
+ - Letra pie imágenes: grey
+ - Botón con hover:  rgb(188, 0, 0)
+ - Shadow: rgb(211,211,211) y black
+ - Borders: rgb(221, 221, 221) y grey
+ - Fondo footer y header de los artículos, y el header de la página: aliceblue
+ - Fondo aside: rgb(1, 10, 69)                                                                                                                                                                     
+______________________________________________________________________
+*/
+
+/* 9. VÍDEO */
+#myVideo {
+    /*Disposición del contenido*/
+    /* position: fixed;
+    width: 100%; 
+    height: 100%;*/
+    top: 0;
+    bottom: 0;
+    object-fit: cover; 
+    object-position: center center; 
+    opacity: 1;
+    z-index: 2000;
+}
+.content {
+    /*Disposición del contenido*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 2500;
+    /*Estilos*/
+    background: rgba(1, 10, 69, 0.8);
+    color: #f1f1f1;
+    /*Animación*/
+    animation-delay: 3s;
+    animation: mymove 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;  
+}
+/*Movimiento de la animación*/
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 3000px;}
+}
+/*Estilos específicos para elementos del contenido del vídeo*/
+.content hr{
+    border: 0.2em solid red;
+    background-color: red;
+    width: 10%;
+    margin-left: 0;
+    z-index: 2600;
+}
+.content p{
+    width: 70%;
+}
+
+
+/*Estilo buscador*/
+.show{
+    display: flex;
+}
