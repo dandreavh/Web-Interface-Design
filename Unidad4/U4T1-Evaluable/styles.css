@@ -1,41 +1,21 @@
 /*____________________________________________________________________
- Project: Ejercicio evaluable
- Version: 5.0
- Last change: 06/12/2022
- Author: Andrea
-
- ---------------------[TABLE OF CONTENTS]---------------------
- 1. GENERAL
- 2. HEADER
- 3. MENÚ
- 4. PARTE DE ARTÍCULOS
- 5. PARTE DE ASIDE
- 6. FOOTER
- 7. Común header y footer
- 8. Estilo responsivo para pantallas móviles
- 9. VÍDEO
-
- ---------------------[COLOR PALETTE]---------------------
- - Fondo menú: rgb(240, 240, 240)
- - Letra menú: rgb(83, 83, 83)
- - Letra menú con hover: black;
- - Fondos menú, footer y botones: red
- - Letra menú, footer y botones: white
- - Letra pie imágenes: grey
- - Botón con hover:  rgb(188, 0, 0)
- - Shadow: rgb(211,211,211) y black
- - Borders: rgb(221, 221, 221) y grey
- - Fondo footer y header de los artículos, y el header de la página: aliceblue
- - Fondo aside: rgb(1, 10, 69)                                                                                                                                                                     
+    Project: Ejercicio evaluable
+    Version: 6.0
+    Last change: 27/01/2023
+    Author: Andrea
+---------------------[TABLE OF CONTENTS]---------------------
+    1- Vídeo
+    2- Buscador
+---------------------[COLOR PALETTE]---------------------
+    - black;
+    - red
+    - #f1f1f1
+    - rgb(1, 10, 69)                                                                                                                                                                   
 ______________________________________________________________________
 */
 
-/* 9. VÍDEO */
+/* 1- VÍDEO */
 #myVideo {
-    /*Disposición del contenido*/
-    /* position: fixed;
-    width: 100%; 
-    height: 100%;*/
     top: 0;
     bottom: 0;
     object-fit: cover; 
@@ -76,8 +56,7 @@ ______________________________________________________________________
     width: 70%;
 }
 
-
-/*Estilo buscador*/
+/* 2- Estilo buscador*/
 .show{
     display: flex;
 }

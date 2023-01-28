@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons kit -->
+    <script src="https://kit.fontawesome.com/7124061660.js" crossorigin="anonymous"></script>
+    <!-- Personal style -->
+    <link rel="stylesheet" href="./styles.css" />
+    <title>EjercicioEvaluable</title>
+</head>
+
+<body>
+    <div id="videoDiv">
+        <video autoplay muted loop id="myVideo">
+            <source src="./video/vídeo_presentación.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="content">
+            <button onclick="cerrar()">&times; Cerrar</button>
+            <h1>Bienvenidos, runners</h1>
+            <hr>
+            <p>Esta es la única plataforma que te ofrece todos los eventos running de España. Inscríbete y está al día de todas las novedades. Regístrate y tendrás todo el registro de los eventos en los que has participado, tus tiempos y clasificación</p>
+        </div>
+    </div>
+    <script>
+        function cerrar() {
+            document.querySelector('#videoDiv').style.display = 'none';
+        }
+    </script>
+    
+    <header><img src="./img/logo.svg" alt="Imperial Logo"/></header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <ul>
+            <li>
+                <a href="#">Calendario<i class="fa-regular fa-calendar"></i></a>
+            </li>
+            <li>
+                <a href="#">Eventos pasados<i class="fa-solid fa-person-running"></i></a>
+            </li>
+            <li>
+                <a href="#">Clasificaciones<i class="fa-solid fa-award"></i></a>
+            </li>
+            <li>
+                <a href="#">Nosotros<i class="fa-solid fa-person"></i></a>
+            </li>
+            <li><button>Login<i class="fa-solid fa-right-to-bracket"></i></button></li>
+            <li><button>Registro<i class="fa-regular fa-address-card"></i></button></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <header>Título noticia 1</header>
+            <img src="./img/526553797_71af8283f8_o.jpg" alt="runner"/>
+            <p>"Running" by rorris is licensed under CC BY-SA 2.0.</p>
+            <section>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima,
+                impedit aliquid. Maiores debitis ad, atque dicta modi quisquam
+                adipisci quae. Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Optio odit fuga doloremque porro repudiandae nostrum suscipit,
+                quam voluptates quis qui dolore illo quaerat assumenda voluptate
+                facere. Ut alias facere soluta?
+            </section>
+            <section>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequatur quos eveniet sint quas, voluptatem quae similique quis
+                enim sed magni. Voluptatum autem illum modi! Molestiae expedita
+                impedit beatae ut nisi! Lorem, repudiandae dicta maiores voluptatem
+                placeat quibusdam temporibus, deserunt animi veniam, architecto
+                cumque voluptas ut quaerat inventore tempora accusamus beatae
+                sapiente obcaecati aut. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Modi dicta recusandae tenetur molestiae eos! Eos
+                explicabo dolorem sed doloribus eaque blanditiis, alias similique
+                cupiditate. Nam quos porro culpa ipsa tempore?
+            </section>
+            <footer>Footer noticia</footer>
+        </article>
+        <article>
+            <header>Título noticia 2</header>
+            <img src="./img/jogging-2343558_1920.jpg" alt="runner" />
+            <p>Licencia: Copyleft. Imagen de <a href="https://pixabay.com/es/users/kinkate-4384506/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2343558">kinkate</a> en <a href="https://pixabay.com/es//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2343558">Pixabay</a></p>
+            <section>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima,
+                impedit aliquid. Maiores debitis ad, atque dicta modi quisquam
+                adipisci quae. Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Deserunt earum ut molestias libero excepturi explicabo
+                quisquam eligendi neque natus, atque aliquam mollitia illo totam
+                dolorem fugiat est. Provident, dolore magni.
+            </section>
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+                numquam id modi omnis qui commodi soluta quidem quas sint aperiam
+                ut, unde est architecto nobis! Perferendis blanditiis hic sequi
+                necessitatibus. Lorem, repudiandae dicta maiores voluptatem placeat
+                quibusdam temporibus, deserunt animi veniam, architecto cumque
+                voluptas ut quaerat inventore tempora accusamus beatae sapiente
+                obcaecati aut. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Minima nostrum consectetur labore saepe laudantium aut error
+                tempora quis blanditiis ab! Cum alias assumenda earum quos dolor!
+                Praesentium sunt asperiores et.
+            </section>
+            <footer>Footer noticia</footer>
+        </article>
+    </section>
+    <div id="asideDiv">
+        <aside class="banner"><img src="./img/Banner.png" alt="Banner" /></aside>
+        <aside>
+            Otra noticia <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum
+            ex deserunt ipsum voluptatem.
+        </aside>
+        <aside>
+            Otra noticia <br />
+            Enim possimus vitae esse nihil architecto fugit qui, numquam, unde
+            quisquam quia quas?
+        </aside>
+    </div>
+    <footer>
+        <h4>IMPERIAL</h4>
+        <div>
+            <img src="./img/facebook.png" alt="facebook icon" />
+            <img src="./img/instagram.png" alt="instagram icon" />
+        </div>
+        <div>
+            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=siguiente%20cuatro%20condiciones%3A-,Atribuci%C3%B3n,-(BY)" target="_blank"><img src="./img/by.svg" alt="BY"></a>
+            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=o%20el%20licenciante.-,No%20Comercial,-(NC)" target="_blank"><img src="./img/nc.svg" alt="NC"></a>
+            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=producir%20obras%20derivadas.-,Compartir%20Igual,-(SA)" target="_blank"><img src="./img/sa.svg" alt="SA"></a>
+        </div>
+    </footer>
+</body>
+</html>

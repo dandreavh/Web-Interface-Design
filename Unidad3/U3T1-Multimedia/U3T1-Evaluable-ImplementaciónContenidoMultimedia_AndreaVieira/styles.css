@@ -1,0 +1,253 @@
+/*____________________________________________________________________
+ Project: Ejercicio evaluable
+ Version: 5.0
+ Last change: 06/12/2022
+ Author: Andrea
+
+ ---------------------[TABLE OF CONTENTS]---------------------
+ 1. GENERAL
+ 2. HEADER
+ 3. MENÚ
+ 4. PARTE DE ARTÍCULOS
+ 5. PARTE DE ASIDE
+ 6. FOOTER
+ 7. Común header y footer
+ 8. Estilo responsivo para pantallas móviles
+ 9. VÍDEO
+
+ ---------------------[COLOR PALETTE]---------------------
+ - Fondo menú: rgb(240, 240, 240)
+ - Letra menú: rgb(83, 83, 83)
+ - Letra menú con hover: black;
+ - Fondos menú, footer y botones: red
+ - Letra menú, footer y botones: white
+ - Letra pie imágenes: grey
+ - Botón con hover:  rgb(188, 0, 0)
+ - Shadow: rgb(211,211,211) y black
+ - Borders: rgb(221, 221, 221) y grey
+ - Fondo footer y header de los artículos, y el header de la página: aliceblue
+ - Fondo aside: rgb(1, 10, 69)                                                                                                                                                                     
+______________________________________________________________________
+*/
+
+/* 1. GENERAL*/
+body{
+    /*Disposición del contenido*/
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 4;
+    grid-gap: 5px;
+    /*Estilos*/
+    font-family: sans-serif;
+}
+/* 2. HEADER */
+header{
+    /*Disposición del contenido*/
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+header img{
+    width: 35%;
+    height: 90%;
+}
+/* 3. MENÚ */
+nav{
+    /*Disposición del contenido*/
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    /*Estilos*/
+    background-color: rgb(240, 240, 240);
+}
+nav ul{
+    /*Disposición del contenido*/
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    /*Estilos*/
+    list-style-type: none;   
+}
+li:last-child{
+    /*Disposición del contenido*/
+    justify-self: flex-end;
+}
+li:nth-child(1), li:nth-child(5){
+    /*Disposición del contenido*/
+    margin-left: auto;
+}
+nav ul li{
+    /*Disposición del contenido*/
+    margin: 0.5em;
+}
+a{
+    /*Estilos*/
+    text-decoration: none;
+    color: rgb(1, 10, 69);
+}
+a:hover{
+    /*Estilos*/
+    color: rgb(83, 83, 83);
+}
+i{
+    padding-left: 0.2em;
+}
+button{
+    /*Disposición del contenido*/
+    padding: 1em;
+    width: 100px;
+    /*Estilos*/
+    border-radius: 2em;
+    border: 0;
+    background-color: red;
+    color: white;
+}
+button:hover{
+    /*Estilos*/
+    background-color: rgb(188, 0, 0);
+}
+/* 4. PARTE DE ARTÍCULOS */
+nav~section{
+    display: flex;
+    flex-direction: column;
+}
+article{
+    /*Disposición del contenido*/
+    margin: 1em;
+    /*Estilos*/
+    box-shadow: 2px 2px 20px rgb(211,211,211);
+    border: solid 0.1px rgb(221, 221, 221);
+}
+article section{
+    /*Disposición del contenido*/
+    grid-column: 1;
+    grid-row: 3;
+    padding: 1em;
+}
+article header, article footer{
+    /*Disposición del contenido*/
+    padding: 1em;
+    text-align: inherit;
+    /*Estilos*/
+    background-color: aliceblue;
+    font-family: inherit;
+    color: inherit;
+}
+img{
+    width: 100%;
+}
+article p{
+    text-align: center;
+    color: grey;
+    font-style: italic;
+}
+/* 5. PARTE DE ASIDE */
+#asideDiv{
+    /*Disposición del contenido*/
+    grid-column: 2;
+    grid-row: 3;
+}
+section~#asideDiv{
+    /*Disposición del contenido*/
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    /*Estilos*/
+    box-shadow: 2px 2px 20px rgb(211,211,211);
+    background-color: rgb(1, 10, 69);
+}
+aside{
+    /*Disposición del contenido*/
+    padding: 0.5em;
+    margin: 1em;
+    height: min-content;
+    text-align: center;
+    /*Estilos*/
+    background-color: rgb(232, 232, 232);
+    box-shadow: 2px 2px 20px black;
+    border: solid 1px grey;
+}
+.banner{
+    background-color: inherit;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+/* 6. FOOTER */
+footer{
+    /*Disposición del contenido*/
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+footer img{
+    margin: 1em;
+    height: auto;
+    width: 2%;
+}
+footer h4{
+    color: red;
+}
+
+/* 7. Común header y footer */
+header, footer{
+    /*Disposición del contenido*/
+    text-align: center;
+    padding: 1em;
+    /*Estilos*/
+    background-color:aliceblue;
+    color: white;
+    font-family: fantasy;
+}
+/* 8. Estilo responsivo para pantallas móviles*/
+@media screen and (max-width: 667px) and (min-width: 375px) and (orientation: portrait){   
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* 9. VÍDEO */
+#myVideo {
+    /*Disposición del contenido*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover; 
+    object-position: center center; 
+    opacity: 1;
+}
+.content {
+    /*Disposición del contenido*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    /*Estilos*/
+    background: rgba(1, 10, 69, 0.8);
+    color: #f1f1f1;
+    /*Animación*/
+    animation-delay: 3s;
+    animation: mymove 2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;  
+}
+/*Movimiento de la animación*/
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 3000px;}
+}
+/*Estilos específicos para elementos del contenido del vídeo*/
+.content button{
+    background-color: initial;
+    width: max-content;
+}
+.content hr{
+    border: 0.2em solid red;
+    background-color: red;
+    width: 10%;
+    margin-left: 0;
+}
+.content p{
+    width: 70%;
+}
