@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons kit -->
+    <script src="https://kit.fontawesome.com/7124061660.js" crossorigin="anonymous"></script>
+    <!-- Graphics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="./ganancias.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" /> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>EjercicioEvaluable</title>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER (ROW 1)-->
+        <div class="row">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand w-3" href="./index.html"><img src="./img/logo.svg" alt="Imperial Logo"
+                                width="100" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Inicio 
+                                        <i class="bi bi-house"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./ganancias.html">Ganancias 
+                                        <i class="bi bi-currency-exchange"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./inscripciones.html">Inscripciones
+                                        <i class="bi bi-person-vcard"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./eventos.html">Eventos
+                                        <i class="bi bi-calendar2-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="d-inline-flex" role="search">
+                                <button class="btn" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                                <div class="collapse" id="collapseExample">
+                                    <input class="form-control me-2" type="search" placeholder="Buscar"
+                                        aria-label="Search" autofocus>
+                                </div>
+                            </form>
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Andrea
+                                <i class="bi bi-box-arrow-in-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- MODAL LOGIN WINDOW -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <i class="bi bi-person-fill"></i>
+                        <label for="user" class="col-form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="user" value="dandreavh" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <i class="bi bi-key-fill"></i>
+                        <label for="password" class="col-form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" value="123456789" disabled></input>
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" id="check"></input>
+                        <label for="check" class="col-form-label">Mantener sesión abierta</label>
+                    </div>
+                    <div class="mb-2">
+                        <a href="" class="text-muted">He olvidado mi contraseña</a>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-danger">Cerrar sesión</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT (ROW 2)-->
+        <div class="row">
+            <div class="border-bottom border-danger border-3">
+                <h1 class="text-center mt-5">Datos de las ganancias</h1>
+            </div>
+            <!-- Columna menú lateral -->
+            <div class="col-sm-3 p-0">
+                <ul class="nav flex-column bg-dark py-5 h-100" data-bs-theme="dark">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./index.html">
+                            <i class="bi bi-house"></i>
+                            Inicio 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" aria-current="page" href="./ganancias.html">
+                            <i class="bi bi-currency-exchange"></i>
+                            Ganancias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./inscripciones.html">
+                            <i class="bi bi-person-vcard"></i>
+                            Inscripciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./eventos.html">
+                            <i class="bi bi-calendar2-check"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                            <i class="bi bi-gear"></i>
+                            Configuración
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                            <i class="bi bi-pencil-square"></i>
+                            Editar perfil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Columna info principal -->
+            <div class="col-sm-8 my-3 ms-sm-5">
+                <div class="container">
+                    <h3 class="text-secondary-emphasis my-3">Mensuales</h3>
+                    <div>
+                        <canvas id="gananciasMensuales2022"></canvas>
+                    </div>
+                </div>
+                <div class="container">
+                    <h3 class="text-secondary-emphasis my-3">Anuales</h3>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER (ROW 3)-->
+        <div class="row border-top border-danger border-3 py-2">
+            <footer>
+                <div class="row text-center mt-3">
+                    <h6>Derechos reservados Imperial Event Planner</h6>
+                    <div>
+                        <p class="mb-0">Licencias de uso</p>
+                        <div>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=siguiente%20cuatro%20condiciones%3A-,Atribuci%C3%B3n,-(BY)"
+                                target="_blank"><img src="./img/by.svg" alt="BY" width="15px"></a>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=o%20el%20licenciante.-,No%20Comercial,-(NC)"
+                                target="_blank"><img src="./img/nc.svg" alt="NC" width="15px"></a>
+                            <a href="https://es.wikipedia.org/wiki/Licencias_Creative_Commons#:~:text=producir%20obras%20derivadas.-,Compartir%20Igual,-(SA)"
+                                target="_blank"><img src="./img/sa.svg" alt="SA" width="15px"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+</html>
