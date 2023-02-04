@@ -116,7 +116,7 @@
                 <h1 class="text-center mt-5">Datos sobre los eventos</h1>
             </div>
             <!-- Columna menú lateral -->
-            <div class="col-sm-3 p-0">
+            <div class="col-md-2 p-0">
                 <ul class="nav flex-column bg-dark py-5 h-100" data-bs-theme="dark">
                     <li class="nav-item">
                         <a class="nav-link text-light" href="./index.html">
@@ -157,19 +157,23 @@
                 </ul>
             </div>
             <!-- Columna info principal -->
-            <div class="col-sm-8 my-3 ms-sm-5">
-                <!-- Gráfica rosco -->
-                <div class="container">
-                    <h3 class="text-secondary-emphasis my-3">Categorías de los eventos</h3>
-                    <div class="w-50 mx-auto">
-                        <canvas id="inscripcionesCategorias"></canvas>
+            <div class="col my-3 d-lg-flex">
+                <!-- Gráfica barras horizontales -->
+                <div class="container w-75">
+                    <h3 class="text-secondary-emphasis my-3">Ranking</h3>
+                    <div class="p-3 mx-auto shadow rounded">
+                        <canvas id="rankingEventos"></canvas>
                     </div>
                 </div>
-                <!-- Gráfica barras horizontales -->
-                <div class="container">
-                    <h3 class="text-secondary-emphasis my-3">Ranking de eventos</h3>
-                    <div class="w-75 mx-auto">
-                        <canvas id="rankingEventos"></canvas>
+                <!-- Gráfica rosco -->
+                <div class="container w-25">
+                    <h3 class="text-secondary-emphasis my-3">Categorías</h3>
+                    <div class="p-1 mx-auto shadow rounded">
+                        <canvas id="inscripcionesCategorias"></canvas>
+                    </div>
+                    <div class="text-center">
+                        <button class="my-4 btn btn-outline-danger">Cargar año 2021</button>
+                        <button class="btn btn-outline-danger">Cargar año 2020</button>
                     </div>
                 </div>
             </div>
