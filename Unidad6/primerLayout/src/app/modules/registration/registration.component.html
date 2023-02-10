@@ -1,3 +1,82 @@
-<div class="container">
-    <h1>Página de Registro</h1>
+<h1 class="text-light text-center py-4">Página de Registro</h1>
+<div class="container w-50 p-5 shadow mb-0 bg-body rounded my-auto" [hidden]="submitted">
+    {{model | json}}
+    <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+        <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input type="text" class="form-control" id="firstName" name="firstName"
+            #firstName="ngModel"
+            required
+            [(ngModel)]="model.firstName">
+            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                El nombre es requerido
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Apellidos</label>
+            <input type="text" class="form-control" id="lastName" name="lastName"
+            #lastName="ngModel"
+            required
+            [(ngModel)]="model.lastName">
+            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+                El apellido es requerido
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email"
+            #email="ngModel"
+            required
+            [(ngModel)]="model.email">
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                El email es requerido
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="size">Talla de camiseta</label>
+            <select class="form-control" id="size" name="size"
+            #size="ngModel"
+            required
+            [(ngModel)]="model.size">
+                <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
+            </select>
+            <div [hidden]="size.valid || size.pristine" class="alert alert-danger">
+                La talla es requerida
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="runningClub">Club de running</label>
+            <input type="text" class="form-control" id="runningClub" name="runningClub"
+            #runningClub="ngModel"
+            [(ngModel)]="model.runningClub">
+        </div>
+        <button type="submit" class="btn btn-success me-4 mt-4" [disabled]="!personForm.form.valid">Enviar</button>
+        <button type="button" class="btn btn-secondary mt-4" (click)="newPerson();">Nueva Persona</button>
+        <button type="button" class="btn btn-secondary mt-4" (click)="personForm.reset()">Resetear info</button>
+        <button type="button" class="btn btn-secondary mt-4" (click)="newPerson();personForm.reset()">Nueva + Resetear </button>
+    </form>
 </div>
+<div class="container p-5 shadow mb-0 bg-body rounded my-auto" [hidden]="!submitted">
+    <h2>Has enviado los siguientes datos:</h2>
+    <div class="row">
+        <div class="col-3">Nombre</div>
+        <div class="col-9">{{ model.firstName }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Apellidos</div>
+        <div class="col-9">{{ model.lastName }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Email</div>
+        <div class="col-9">{{ model.email }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Talla de Camiseta</div>
+        <div class="col-9">{{ model.size }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Club de Running</div>
+        <div class="col-9">{{ model.runningClub }}</div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="submitted=false">Editar</button>
